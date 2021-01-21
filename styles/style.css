@@ -106,6 +106,7 @@
 .description {
   display: flex;
   justify-content: center;
+  min-height: 450px;
 }
 
 .two-columns {
@@ -125,7 +126,7 @@
   left: 0;
 }
 
-.brief {
+.description__brief {
   margin: 0;
 
   color: #2f80ed;
@@ -149,7 +150,7 @@
   
 .description__main-text {
   margin: 0;
-  
+
   line-height: 34px;
   font-size: 24px;
   font-weight: 400;
@@ -159,10 +160,192 @@
   font-weight: 700;
 }
 
+/* раздел цифры и факт */
+
+.digits {
+  margin-top: 100px;
+}
+
+.section-table {
+  width: 60%;
+  margin: 0 auto 0 auto;
+}
+
+.section-table__text {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  width: 60%;
+  margin: 20px auto 0 auto;
+}
+
+.section-subtitle__text {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 60px auto 100px auto;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.table__cell {
+  width: 250px;
+  height: 125px;
+}
+
+.table__cell:first-of-type {
+  margin-bottom: 60px;
+}
+
+.table__heading {
+  margin-bottom: 20px;
+
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.feynman {
+  height: 790px;
+  background-color: #f2f2f2;
+  position: relative;
+  
+}
+
+.feynman__image-position {
+  width: 867px;
+  height: 637px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.feynman__title {
+  display: flex;
+  width: 648px;
+  margin: 100px auto 0 auto;  
+}
+
+.feynman__title-text {
+  text-align: center;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 700;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+.feynman__subtitle {
+  margin: 70px auto 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.feynman__subtitle-text {
+  text-align: center;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+}
+
+.feynman__link-styles {
+  text-decoration: none;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: 400;
+  color: #2f80ed;
+}
+
+.feynman__link-styles:hover {
+  color: #e3256b;
+}
+
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+/*footer*/
+
+.footer {
+  margin-top: 500px; /* удалить отсуп после верстки контента */
+  background-color: #1f1f1f;
+  color: #f2f2f2;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__columns {
+  border: 1px solid yellow;
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  margin: 60px auto 40px auto;
+  position: relative;
+}
+
+.logo_place_footer {
+  width: 183px;
+  height: 35px;
+}
+
+.footer__column_content_copyright {
+  position: absolute;
+  bottom: 18px;
+
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.footer__column_content_copyright::after {
+  content: ' Алексей Голодников';
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.footer__column-links {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.footer__links {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.footer__links:hover {
+  color: #e3256b;
 }
