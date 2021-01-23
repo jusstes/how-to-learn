@@ -150,6 +150,8 @@
 
 .digits {
   margin-top: 100px;
+
+  min-height: 500px;
 }
 
 .section-title {
@@ -379,7 +381,6 @@
   font-size: 18px;
   font-weight: 400;
   color: #f2f2f2;
-
 }
 
 .footer__column-link:hover {
