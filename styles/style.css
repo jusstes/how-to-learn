@@ -14,6 +14,7 @@
   display: flex;
 
   position: relative;
+  z-index: 1;
 
   height: 100vh;
   min-height: 600px;
@@ -22,18 +23,16 @@
 
   background-color: #f2f2f2;
 }
-  /* не понимаю зачем блок лого, если в футере он не пригодится */
-.logo {
 
+.logo {
+  width: 183px;
 }
 
 .logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
-  z-index: 2;
 
-  width: 183px;
   height: 32px;
 }
 
@@ -41,9 +40,11 @@
   display: flex;
   align-self: center;
 
-  position: absolute;
-  left: 64px;
-  z-index: 2;
+  position: relative;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 64px;
 
   max-width: 730px;
 
@@ -56,7 +57,9 @@
   position: absolute;
   bottom: 30px;
   left: 64px;
-  z-index: 2;
+
+  margin-top: 0;
+  margin-bottom: 0;
 
   width: 388px;
 
@@ -78,7 +81,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 1;
+  z-index: -1;
 
   max-width: 765px;
 }
@@ -86,6 +89,7 @@
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
+  z-index: -2;
   top: 64px;
   right: 0px;
 
@@ -102,8 +106,6 @@
   justify-content: center;
 
   margin-top: 100px;
-
-  min-height: 330px;
 }
 
 .two-columns {
@@ -126,11 +128,6 @@
 }
 
 .two-columns__main-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  height: 330px;
   max-width: 80%;
 
   line-height: 34px;
@@ -139,6 +136,10 @@
 }
 
 .two-columns__paragraph {
+  margin: 0 0 30px 0;
+}
+
+.two-columns__paragraph:last-child {
   margin: 0;
 }
 
@@ -150,8 +151,6 @@
 
 .digits {
   margin-top: 100px;
-
-  min-height: 500px;
 }
 
 .section-title {
@@ -198,12 +197,10 @@
   margin-top: 60px;
 
   width: 250px;
-  min-height: 100px;
 }
 
 .table__heading {
   margin-top: 0;
-  margin-bottom: 20px;
 
   line-height: 1.15;
   font-size: 24px;
@@ -211,6 +208,9 @@
 }
 
 .table__text {
+  margin-top: 20px;
+  margin-bottom: 0;
+
   line-height: 1.2;
   font-size: 18px;
   font-weight: 400;
@@ -284,24 +284,24 @@
 .kaufman {
   position: relative;
   overflow: hidden;
-
-  min-height: 700px;
+  z-index: 1;
 
   background-color: #1f1f1f;
   color: #f2f2f2;
 }
 
 .section-title_theme_dark {
+  position: relative;
   margin-top: 90px;
 }
 
 .section-subtitle_theme_dark {
+  position: relative;
   margin-top: 20px;
 }
 
 .table_theme_dark {
   position: relative;
-  z-index: 1;
   margin: 0 auto 90px auto;
 }
 
@@ -322,11 +322,15 @@
 
 .kaufman__triangle {
   position: absolute;
+  z-index: -1;
   top: 0;
   right: -210px;
 
   width: 877px;
   height: 877px;
+
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: 877px;
 }
 
 /*footer*/
@@ -351,7 +355,6 @@
 }
 
 .logo_place_footer {
-  width: 183px;
   height: 35px;
 }
 
