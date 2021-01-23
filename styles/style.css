@@ -67,6 +67,7 @@
 
 .header__link {
   text-decoration: none;
+  color: #2f80ed;
 }
 
 .header__link:hover {
@@ -228,8 +229,8 @@
   bottom: 0;
   left: 0;
 
-  width: 867px;
-  height: 637px;
+  max-width: 867px;
+  max-height: 637px;
 }
 
 .feynman__title {
@@ -237,8 +238,10 @@
   position: relative;
   z-index: 1;
 
+  margin: 0 auto 0 auto;
+  padding-top: 100px; /*уходит просто вниз, но не тянет макет вверх*/
+
   width: 648px;
-  margin: 100px auto 0 auto;
 
   text-align: center;
   line-height: 1.15;
@@ -258,10 +261,10 @@
 }
 
 .feynman__link {
-  display: block;
   position: absolute;
   top: 50%;
   right: 48px;
+  z-index: 2;
 
   text-decoration: none;
   line-height: 51px;
@@ -334,13 +337,15 @@
 }
 
 .footer__columns {
-  border: 1px solid yellow;
   display: flex;
   justify-content: space-between;
 
+  margin: 0 auto 0 auto;
   padding-top: 60px;
   padding-bottom: 40px;
+
   width: 90%;
+  min-height: 250px;
 }
 
 .logo_place_footer {
@@ -349,30 +354,59 @@
 }
 
 .footer__column_content_copyright {
-  position: absolute; /* добавить вторую ось позиционирования */
-  bottom: 18px;
-
-  line-height: 25px;
-  font-size: 18px;
-}
-
-.footer__column_content_copyright::after {
-  content: ' Алексей Голодников';
-  line-height: 25px;
-  font-size: 18px;
-}
-
-.footer__column-links {
   display: flex;
   flex-direction: column;
-
+  justify-content: space-between;
+  flex-basis: 711px;
 }
 
-.footer__links {
+.footer__author {
+  margin: 18px 0 18px 0;
+
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+.footer__column-link {
+  margin-bottom: 16px;
+
+  max-height: 16px;
+
   text-decoration: none;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 400;
   color: #f2f2f2;
+
 }
 
-.footer__links:hover {
-  color: #e3256b;
+.footer__column-link:hover {
+  color: #2f80ed;
+}
+
+.footer__column_content_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__column_content_social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__column-heading {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer__social-icon {
+  margin: auto 10px auto 0;
+  width: 16px;
+  height: 16px;
 }
