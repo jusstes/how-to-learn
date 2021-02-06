@@ -2,6 +2,6 @@
 
 Информационый проект об образовательных техниках, а так же цифрах в обучении.
 
-Pure HTML and clean CSS :)
+Pure HTML5 and clean CSS3 :)
 
 Stay tuned
