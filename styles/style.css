@@ -6,7 +6,7 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
   color: #000;
 }
 
@@ -72,7 +72,8 @@
 }
 
 .header__link:hover {
-  color: #e3256b;
+  opacity: .75;
+  transition: opacity  linear .2s;
 }
 
 .header__main-illustration {
@@ -139,6 +140,7 @@
 
 .two-columns__main-text {
   max-width: 80%;
+  min-width: 784px;
 
   line-height: 34px;
   font-size: 24px;
@@ -168,7 +170,7 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-justify-content: space-between; /* пофиксить расстояние меж карточками. чекни слонов от Саши */
+
   padding: 0;
   margin: 0 auto 0 auto;
   width: 920px;
@@ -180,7 +182,11 @@ justify-content: space-between; /* пофиксить расстояние ме�
   width: 240px;
   padding-top: 60px;
 
+  margin-right: 100px;
+}
 
+.card__item:nth-of-type(3) {
+  margin: 0;
 }
 
 .card__title {
@@ -308,6 +314,8 @@ justify-content: space-between; /* пофиксить расстояние ме�
 }
 
 .khan__book-pic {
+  margin: 0 48px 0 0;
+
   width: 620px;
   height: 608px;
 
@@ -316,13 +324,19 @@ justify-content: space-between; /* пофиксить расстояние ме�
 }
 
 .khan__buy-link {
-  margin: 0 0 0 48px;
+  height: 100%;
+  margin: 0;
 
   text-decoration: none;
   color: #2f80ed;
   line-height: 42px;
   font-size: 30px;
   font-weight: 400;
+}
+
+.khan__buy-link:hover {
+  opacity: .75;
+  transition: opacity  linear .2s;
 }
 
 /* resources */
@@ -472,7 +486,8 @@ justify-content: space-between; /* пофиксить расстояние ме�
 }
 
 .feynman__link:hover {
-  color: #e3256b;
+  opacity: .75;
+  transition: opacity  linear .2s;
 }
 
 /* kaufman */
@@ -584,7 +599,8 @@ justify-content: space-between; /* пофиксить расстояние ме�
 }
 
 .footer__column-link:hover {
-  color: #2f80ed;
+  opacity: .75;
+  transition: opacity  linear .2s;
 }
 
 .footer__column_content_info {
