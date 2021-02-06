@@ -95,6 +95,7 @@
 }
 
 .rotation {
+  transform-origin: 520px 385px; /* ну почти :) */
   animation: rotation 20s linear infinite;
 }
 
