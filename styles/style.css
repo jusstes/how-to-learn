@@ -93,7 +93,7 @@
 }
 
 .rotation {
-  transform-origin: 520px 385px; /* ну почти :) */
+
   animation: rotation 20s linear infinite;
 }
 
@@ -201,7 +201,7 @@
 .card__description {
   margin: 0;
 
-  text-align: center; 
+  text-align: center;
   line-height: 23px;
   font-size: 18px;
   font-weight: 400;
@@ -541,6 +541,8 @@
 
   background-image: url(../images/kaufman-triangle.svg);
   background-size: 877px;
+
+  transform-origin: 520px 385px; /* ну почти :) */
 }
 
 /*footer*/
