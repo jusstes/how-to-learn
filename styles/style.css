@@ -15,6 +15,7 @@
 
   position: relative;
   z-index: 1;
+  overflow: hidden;
 
   height: 100vh;
   min-height: 600px;
@@ -83,7 +84,19 @@
   max-width: 765px;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotation {
+  animation: rotation 20s linear infinite;
+}
+
 .header__square-pic {
   position: absolute;
   z-index: -2;
@@ -144,10 +157,196 @@
   font-weight: 700;
 }
 
+/* techniques */
+
+.techniques {
+  margin: 100px auto 0 auto;
+
+  width: 80%;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-between; /* пофиксить расстояние меж карточками. чекни слонов от Саши */
+  padding: 0;
+  margin: 0 auto 0 auto;
+  width: 920px;
+
+  list-style: none;
+}
+
+.card__item {
+  width: 240px;
+  padding-top: 60px;
+
+
+}
+
+.card__title {
+  margin: 43px 0 16px 0;
+
+  text-align: center;
+
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 0;
+
+  text-align: center; /* Шрифт отображается не по брифу */
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.card__image {
+  margin: 0 40px 0 40px;
+
+
+  width: 160px;
+  height: 160px;
+
+  border-radius: 50%;
+}
+
+/* video */
+
+.video {
+  margin-top: 100px;
+}
+
+.video__iframes {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.video__iframe {
+  margin: 50px 0 -50px 0;
+  padding-right: 20px;
+
+  width: 515px;
+  height: 316px;
+
+  border: none;
+}
+
+/* oakley */
+
+.oakley {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 160px;
+
+  background-color: #f2f2f2;
+}
+
+/* khan */
+
+.khan {
+  padding-top: 105px;
+
+  background-color: #f2f2f2;
+}
+
+.khan__container {
+  margin: 0 auto 0 auto;
+
+  width: 80%;
+}
+
+.khan__author {
+  margin: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.khan__title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.khan__quote {
+  margin: 50px 0 36px 0;
+  width: 790px;
+
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.khan__quote-author {
+  margin: 0 0 10px 0;
+
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.khan__quote-author-subline {
+  margin: 0;
+
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.khan__book-container {
+  margin: 68px 0 0 0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+
+  object-fit: cover;
+  object-position: top;
+}
+
+.khan__buy-link {
+  margin: 0 0 0 48px;
+
+  text-decoration: none;
+  color: #2f80ed;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* resources */
+
+.resources {
+  padding-top: 100px;
+  padding-bottom: 217px;
+}
+
+.resources__logo-zone {
+  margin: 80px auto 0 auto;
+
+  width: 1100px;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
+}
+
 /* digits */
 
 .digits {
-  margin-top: 100px;
+  margin: 100px auto 100px auto;
 }
 
 .section-title {
@@ -217,7 +416,7 @@
 
 .feynman {
   position: relative;
-  padding-top: 100px;
+  padding-top: 80px;
 
   min-height: 790px;
 
@@ -275,7 +474,7 @@
 .feynman__link:hover {
   color: #e3256b;
 }
-/**/
+
 /* kaufman */
 
 .kaufman {
