@@ -185,7 +185,7 @@
   margin-right: 100px;
 }
 
-.card__item:nth-of-type(3) {
+.card__item:nth-child(3n+3) {
   margin: 0;
 }
 
