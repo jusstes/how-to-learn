@@ -7,3 +7,7 @@
 
   border: none;
 }
+
+.video__iframe:last-child {
+  padding-right: 0;
+}
