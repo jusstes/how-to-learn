@@ -4,4 +4,6 @@
 
 Pure HTML5 and clean CSS3 :)
 
+and BEM of course.
+
 Stay tuned
